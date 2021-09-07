@@ -8,19 +8,19 @@ public class BeakJoon_No_9012 {
         BeakJoon_No_9012 solving = new BeakJoon_No_9012();
         int K = scan.nextInt();
         for(int i=0; i<K; i++) {
-            System.out.println(solving.solve());
+            String input = scan.next();
+            System.out.println(solving.solve(input));
         }
     }
-    public String solve(){
-            String input = scan.next();
+    public String solve(String input){
             String arr[] = new String[input.length()];
             Stack<String> s = new Stack<>();
-            for(int j=0;j<arr.length; j++){
+            for(int i=0;i<input.length(); i++){
                 arr = input.split("");
             }
-            for(int j=0;j<arr.length;j++) {
-                if(arr[j].equals("(")) {
-                    s.push(arr[j]);
+            for(int i=0;i<arr.length;i++) {
+                if(arr[i].equals("(")) {
+                    s.push(arr[i]);
                 }
                 else if (s.empty()){
                     return "NO";
