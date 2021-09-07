@@ -16,7 +16,12 @@ public class BeakJoon_No_10773 {
             int pushNum = scan.nextInt();
             if(pushNum == 0 && s.empty())i--;
             if(pushNum != 0)s.push(pushNum);
-            if(pushNum == 0 && !s.empty())s.pop();
+            if(pushNum == 0){
+                if (s.empty()) i--;
+                else{
+                    s.pop();
+                }
+            }
         }
         while (!s.empty()){
             answer += s.pop();
