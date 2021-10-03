@@ -14,8 +14,10 @@ public class Level_1_RecommendNewId {
             else if(newId[i].equals("_"))answer+=newId[i];
             else if(newId[i].equals("."))answer+=newId[i];
         }
-        answer = answer.replace("...",".");
-        answer = answer.replace("..",".");
+        while (answer.contains("..")){
+            answer = answer.replace("...",".");
+            answer = answer.replace("..",".");
+        }
 
         if(answer.startsWith(".")){
             answer = answer.substring(1,answer.length());
