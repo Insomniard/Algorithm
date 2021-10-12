@@ -1,4 +1,4 @@
-package Programmers;
+package Programmers.Level_2;
 
 import java.util.*;
 public class Level_2_NGame {
