@@ -29,10 +29,9 @@ public class BeakJoon_No_7576 {
         }
 
         bfs();
-        if(answer != 0 && answer != -1)System.out.println(answer-1);
-        else System.out.println(answer);
+        System.out.println(bfs());
     }
-    public static void bfs(){
+    public static int bfs(){
         while (!q.isEmpty()){
             int x = q.poll();
             int y = q.poll();
@@ -48,17 +47,16 @@ public class BeakJoon_No_7576 {
                     }
                 }
             }
-
         }
         for(int i=0;i<M;i++){
             for(int j=0;j<N;j++){
-                if(map[i][j] == 0)return;
+                if(map[i][j] == 0)return -1;
                 answer = Math.max(answer,map[i][j]);
             }
         }
         if(answer == 1){
-            answer=0;
-            return;
+            return 0;
         }
+        return answer-1;
     }
 }

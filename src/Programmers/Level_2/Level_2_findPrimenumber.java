@@ -40,5 +40,4 @@ public class Level_2_findPrimenumber {
         }
         return true;
     }
-
 }

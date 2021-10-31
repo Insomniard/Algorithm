@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
-public class BeadJoon_No_2667 {
+public class BeakJoon_No_2667 {
     public static int[] posX = {1,0,-1,0};
     public static int[] posY = {0,1,0,-1};
     static int Danji;
