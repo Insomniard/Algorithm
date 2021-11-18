@@ -15,9 +15,7 @@ public class BeakJoon_No_1931 {
         ArrayList<time> list = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-            int start = Integer.parseInt(st.nextToken());
-            int end = Integer.parseInt(st.nextToken());
-            list.add(new time(start, end));
+            list.add(new time(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
         }
 
         Collections.sort(list, (o1, o2) -> {
