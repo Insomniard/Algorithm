@@ -12,6 +12,7 @@ public class BeakJoon_No_2206 {
     static int N, M;
 
     public static void main(String args[]) throws IOException {
+        
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         N = Integer.parseInt(st.nextToken());
@@ -19,13 +20,19 @@ public class BeakJoon_No_2206 {
         map = new int[N][M];
         visit = new int[N][M];
         for (int i = 0; i < N; i++) {
+            
             String[] temp = br.readLine().split("");
+            
             for (int j = 0; j < M; j++) {
+                
                 map[i][j] = Integer.parseInt(temp[j]);
                 visit[i][j] = 100000;
+                
             }
         }
+        
         System.out.println(bfs(0, 0));
+        
     }
 
     public static int bfs(int x, int y) {
@@ -33,12 +40,15 @@ public class BeakJoon_No_2206 {
         Queue<Point> q = new LinkedList<>();
         q.add(new Point(x, y, 1, 0));
         while (!q.isEmpty()) {
+            
             Point point = q.poll();
             if (point.x == M - 1 && point.y == N - 1) {
                 return point.distance;
+                
             }
 
             for (int i = 0; i < 4; i++) {
+                
                 int sx = point.x + dx[i];
                 int sy = point.y + dy[i];
                 if (sx >= 0 && sy >= 0 && sx < M && sy < N) {
@@ -52,6 +62,7 @@ public class BeakJoon_No_2206 {
                                 visit[sy][sx] = point.wall + 1;
                             }
                         }
+                        
                     }
                 }
             }

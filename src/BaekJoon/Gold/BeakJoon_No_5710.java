@@ -10,6 +10,7 @@ public class BeakJoon_No_5710 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
+
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
@@ -30,7 +31,6 @@ public class BeakJoon_No_5710 {
                     System.out.println(getTotalPrice(mid));
                     break;
                 }
-//                System.out.println(mid + " " + left + " " + right);
             }
         }
 
