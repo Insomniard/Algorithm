@@ -12,19 +12,24 @@ public class BeakJoon_No_1759 {
     private static int L, C;
 
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
         L = Integer.parseInt(st.nextToken());
         C = Integer.parseInt(st.nextToken());
         ArrayList<String> list = new ArrayList<>();
         arr = new char[C];
         visit = new boolean[C];
         st = new StringTokenizer(br.readLine(), " ");
+
         for (int i = 0; i < C; i++) {
             arr[i] = st.nextToken().charAt(0);
         }
+
         Arrays.sort(arr);
         combination(0, 0);
+
         for (String s : set) {
             System.out.println(s);
         }
@@ -32,11 +37,13 @@ public class BeakJoon_No_1759 {
 
     private static void combination(int current, int depth) {
         String answer = "";
+
         for (int i = 0; i < C; i++) {
             if (visit[i]) {
                 answer += arr[i];
             }
         }
+
         if (isWord(answer)) {
             set.add(answer);
         }
@@ -54,6 +61,7 @@ public class BeakJoon_No_1759 {
         String collection = "aeiou";
         int collectionCount = 0;
         int consonantCount = 0;
+
         for (int i = 0; i < str.length; i++) {
             if (collection.contains(str[i])) {
                 collectionCount++;
@@ -61,6 +69,7 @@ public class BeakJoon_No_1759 {
                 consonantCount++;
             }
         }
+
         if (collectionCount >= 1 && consonantCount >= 2) {
             return true;
         }
