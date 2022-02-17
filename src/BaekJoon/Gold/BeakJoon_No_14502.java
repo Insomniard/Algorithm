@@ -52,6 +52,7 @@ public class  BeakJoon_No_14502 {
     }
 
     public static void dfs(int countofWall) {
+        
         if (countofWall == 3) {
             bfs();
             return;
@@ -68,6 +69,7 @@ public class  BeakJoon_No_14502 {
     }
 
     public static void bfs() {
+        
         clear();
         while (!q.isEmpty()) {
             Point point = q.poll();
