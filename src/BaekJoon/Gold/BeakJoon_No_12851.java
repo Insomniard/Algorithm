@@ -33,6 +33,7 @@ public class BeakJoon_No_12851 {
                 }
                 continue;
             }
+
             if(current.pos-1>=0 && !visit[current.pos-1]){
                 q.add(new Point(current.pos-1, nextTime+1));
             }
