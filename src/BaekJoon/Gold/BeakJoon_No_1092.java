@@ -18,20 +18,27 @@ public class BeakJoon_No_1092 {
         for (int i = 0; i < N; i++) {
             crain.add(Integer.parseInt(st.nextToken()));
         }
+
         int M = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine(), " ");
+
         for (int i = 0; i < M; i++) {
             weight.add(Integer.parseInt(st.nextToken()));
         }
+
         Collections.sort(crain, Collections.reverseOrder());
         Collections.sort(weight, Collections.reverseOrder());
+
         int answer = 0;
+
         if (crain.get(0) < weight.get(0)) {
             System.out.println(-1);
             return;
         }
+
         while (!weight.isEmpty()) {
             int index = 0;
+
             for (int i = 0; i < crain.size();i++) {
                 if (index == weight.size()) {
                     break;
