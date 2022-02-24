@@ -15,6 +15,7 @@ public class BeakJoon_No_1107 {
         for(int i=0;i<partition;i++){
             visit[Integer.parseInt(st.nextToken())] = true;
         }
+
         int answer = Math.abs(channel - 100);
         for (int i=0;i<=999999;i++){
             String[] s = Integer.toString(i).split("");
